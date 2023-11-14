@@ -1,0 +1,106 @@
+###Get Request
+GET http://localhost:3030/api
+
+###Post Request
+POST http://localhost:3030/api/v2/gl-maintenace/add
+Content-Type: application/json
+   {
+"accountNumber": "1332536162",
+"generalLedger": "100260100614",
+"currency": "USD",
+"glName": "sterling",
+"country": "",
+"baseCountry": "Uganda",
+"type": "CITI"
+}
+
+###POST
+POST http://localhost:3030/api/v2/gl-maintenace/add
+Content-Type: application/json
+
+
+###Post Request Many
+POST http://localhost:3030/api/v2/gl-maintenace/addList
+Content-Type: application/json
+[
+{
+  "accountNumber": "24893248",
+  "generalLedger": "1430033472",
+  "currency": "KES",
+  "glName": "CITI LONDON",
+  "country": "Tanzania",
+  "baseCountry": "Uganda",
+  "type": "CITI"
+},
+{
+  "accountNumber": "123456789",
+  "generalLedger": "4312232",
+  "currency": "UGX",
+  "glName": "Kenya",
+  "country": "Uganda",
+  "baseCountry": "Kenya",
+  "type": "BOU"
+}
+]
+###Put Request
+PUT http://localhost:3030/api/general-ledgers/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "accountNumber": "327412",
+  "generalLedger": "10009384",
+  "currency": "CAD",
+  "glName": "INTER COUNTRY",
+  "country": "Kenya",
+  "baseCountry": "Uganda",
+  "type": ""
+}
+
+###Delete Request
+DELETE http://localhost:3030/api/v2/gl-maintenace/delete/2
+#Content-Type: application/json
+#{
+#   "id": 1
+#}
+
+###Get all
+GET http://localhost:3030/api/v2/gl-maintenace/getKawaida
+
+###Get By country
+GET http://localhost:3030/api/v2/gl-maintenace/get/byCountry?country=tanzania
+#Content-Type: application/json
+#{
+#  "country": "Uganda"
+#}
+
+###oldData
+GET http://localhost:3030/api/v2/gl-maintenace/get/byCountry?country=Uganda
+
+###get all
+GET http://localhost:3030/api/v2/gl-maintenace/getAll
+
+###Post request
+POST http://localhost:3030/placeOrder
+Content-Type: application/json
+
+
+### Get By BaseCountry
+GET http://localhost:3030/api/v2/gl-maintenace/getByBaseCountry?baseCountry=Uganda
+
+###GET DISTINCT LIST
+GET http://localhost:3030/api/v2/gl-maintenace/getByCountry?country=Kenya
+
+###Get List of Countries
+GET http://localhost:3030/api/v2/gl-maintenace/filterCountry?baseCountry=Uganda
+
+###Get subsidiaries based on type ie. local or any input
+GET http://localhost:3030/api/v2/gl-maintenace/getSubsidiaries?input=Local
+
+###Get subsidiaries based on type ie. local or any input
+GET http://localhost:3030/api/v2/gl-maintenace/getSubsidiaries?input=swift
+
+
+
+
+
