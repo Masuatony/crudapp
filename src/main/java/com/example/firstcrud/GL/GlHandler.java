@@ -46,7 +46,7 @@ public class GlHandler {
                 response.setStatusCode(HttpStatus.NOT_ACCEPTABLE.value());
             } else {
 //                Gl gls = glRepo.save(adds);
-                adds.setActive(false);
+//                adds.setActive(false);
                 response.setStatusCode(HttpStatus.OK.value());
                 response.setMessage("Gl saved successfuly");
                 glRepo.save(adds);

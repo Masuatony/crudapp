@@ -27,9 +27,9 @@ public class Gl {
 //    private String status = "Active";
     private ModifiedFlag modifiedFlag = ModifiedFlag.N;
     @Column(name = "status")
-    private boolean isActive;
-    private Date createdOn = new Date();
-    private Date updatedOn;
+    private boolean isActive = false;
+//    private Date createdOn = new Date();
+//    private Date updatedOn;
 //    private String status;
 //    private Timestamp
 
